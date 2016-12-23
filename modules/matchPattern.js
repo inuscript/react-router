@@ -13,7 +13,7 @@ const getMatcher = (pattern, exactly) => {
 
   if (!matcher) {
     const keys = []
-    const regex = pathToRegexp(pattern, keys, { end: exactly, strict: true })
+    const regex = pathToRegexp(pattern, keys, { end: exactly, strict: false })
     matcher = { keys, regex }
     const cacheSize = Object.keys(cache[exactlyStr][pattern] || {}).length
     if (cacheSize < CACHE_LIMIT) {

@@ -350,9 +350,9 @@ describe('Match', () => {
     })
 
     describe('when the trailing slash is missing', () => {
-      it('does not renders', () => {
+      it('renders', () => {
         run({ pathname: '/foo' }, (html) => {
-          expect(html).toNotContain(TEXT)
+          expect(html).toContain(TEXT)
         })
       })
     })
@@ -391,9 +391,9 @@ describe('Match', () => {
     })
 
     describe('when the trailing slash is missing', () => {
-      it('does not renders', () => {
+      it('renders', () => {
         run({ pathname: '/foo' }, (html) => {
-          expect(html).toNotContain(TEXT)
+          expect(html).toContain(TEXT)
         })
       })
     })
